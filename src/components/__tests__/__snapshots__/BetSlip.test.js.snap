@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when there are no items 1`] = `
+<div
+  className="slip-container"
+>
+  <p
+    className="slip-container__amount"
+  >
+    Toplam Tutar: 0
+  </p>
+</div>
+`;

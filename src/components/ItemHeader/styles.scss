@@ -1,0 +1,89 @@
+@import "../../styles/styles";
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px 5px 0px 5px;
+    background-color: transparent;
+    border-bottom: 1px solid $border;
+
+    &__left {
+        display: flex;
+        flex: 0.5;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__match-info {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__match-index {
+        font-weight: bold;
+        color: $index;
+        margin-right: 5px;
+    }
+
+    &__match-date {
+        font-weight: bold;
+        color: $title;
+        margin-right: 5px;
+    }
+
+    &__match-day {
+        font-weight: bold;
+        color: $title;
+        margin-right: 5px;
+    }
+
+    &__match-league-name {
+        font-weight: bold;
+        color: $title;
+        margin-right: 5px;
+    }
+
+    &__comment {
+        flex: 1;
+        text-align: end;
+        border-right: 1px solid $border;
+        padding: 10px 5px 10px 0px;
+    }
+
+    &__right {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__text {
+        flex: 1;
+        align-items: center;
+        text-align: center;
+        border-right: 1px solid $border;
+        padding: 10px 0px 10px 0px;
+
+        &--last-child {
+            flex: 1;
+            align-items: center;
+            text-align: center;
+            border-right: none;
+        }
+
+        &--empty {
+            flex: 1;
+            height: 36px;
+            border-right: 1px solid $border;
+            padding: 10px 0px 10px 0px;
+        }
+    }
+}

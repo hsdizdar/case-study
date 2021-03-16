@@ -1,0 +1,32 @@
+@import "../../styles/styles";
+
+.rate-button {
+    flex: 1;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid $border;
+    padding: 10px 0px 10px 0px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus, &:active {
+        outline: none;
+        border: none;
+    }
+    
+    &--active {
+        flex: 1;
+        align-items: center;
+        background-color: $rate;
+        border: none;
+        padding: 10px 0px 10px 0px;
+
+        &:focus, &:active {
+            outline: none;
+            border: none;
+        }
+    }
+}
