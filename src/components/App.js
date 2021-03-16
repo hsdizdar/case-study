@@ -1,9 +1,11 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 
 import Header from './Header';
 import ItemHeader from './ItemHeader';
 import Item from './Item';
 import BetSlip from './BetSlip';
+import Loader from './Loader';
 
 import data from '../../assets/data.json';
 
@@ -13,7 +15,7 @@ const App = () => (
   <main>
     <Header eventsCount={Object.values(data.Events).length} />
     {Object.values(data.Events).map((match, index) => (
-      <div>
+      <LazyLoad key={match.C} placeholder={<Loader />}>
         <ItemHeader
           key={match.C}
           index={index}
@@ -29,7 +31,7 @@ const App = () => (
           mbs={Object.values(match.OCG).map((ocg) => ocg.MBS)[0]}
           rates={match.OCG}
         />
-      </div>
+      </LazyLoad>
     ))}
     <BetSlip />
   </main>
